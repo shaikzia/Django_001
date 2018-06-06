@@ -1,0 +1,21 @@
+<!-- # Count -->
+
+<h1> Count : There are {{no_of_words}} words in your text</h1>	
+
+<a href="{% url 'home' %}">Start Again</a>
+
+<h2> Your given text is: </h2>
+
+{{fulltext}}
+
+<h2> The result of Word Count is: </h2>
+
+<!-- {{ wordsdictionary }} -->
+
+{% for word, wordcount in wordsdictionary%}
+
+{{word}} - {{wordcount}}
+
+<br/>
+
+{% endfor %}
